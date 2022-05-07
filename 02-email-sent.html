@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yard Sale - Create a New Password</title>
+  <title>Yard Sale - Email Sent!</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
@@ -37,6 +38,7 @@
       display: grid;
       grid-template-rows: auto 1fr auto;
       width: 350px;
+      justify-items: center;
     }
 
     .logo {
@@ -61,25 +63,19 @@
       text-align: center;
     }
 
-    .form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .label {
-      font-size: var(--sm);
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-
-    .input {
+    .email-image {
+      width: 132px;
+      height: 132px;
       background-color: var(--text-input-field);
-      border: none;
-      border-radius: 8px;
-      height: 32px;
-      font-size: var(--md);
-      padding: 6px;
-      margin-bottom: var(--sm);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .email-image img {
+      width: 80px;
     }
 
     .primary-button {
@@ -94,9 +90,18 @@
       height: 50px;
     }
 
-    .login-button {
-      margin-top: 14px;
-      margin-bottom: 30px;
+    .resend {
+      text-align: center;
+      font-size: var(--sm);
+      font-weight: 300;
+      color: var(--very-light-pink);
+      margin-top: 16  px;
+    }
+
+    .resend-link {
+      color: var(--hosp-green);
+      font-weight: 300;
+      text-decoration: none;
     }
 
     @media (max-width: 640px) {
@@ -104,24 +109,22 @@
         display: block;
       }
     }
-
   </style>
 </head>
+
 <body>
   <div class="login">
     <div class="form-container">
       <img src="./logos/logo_yard_sale.svg" alt="" class="logo">
-      <h1 class="title">Create a new password</h1>
-      <p class="subtitle">Enter a new password for your account</p>
-      <form action="" class="form">
-        <label for="Password" class="label">Password</label>
-        <input type="password" id="password" class="input input-password"
-          placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
-        <label for="Password-Reenter" class="label">Re-enter password</label>
-        <input type="password" id="password" class="input input-password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
-        <input type="submit" value="Confirm" class="primary-button login-button">
-      </form>
+      <h1 class="title">Email has been sent!</h1>
+      <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
+      <div class="email-image">
+        <img src="./icons/email.svg" alt="email icon">
+      </div>
+      <button class="primary-button">Login</button>
+      <p class="resend">Didn't receive the email? <span><a href="#"  class="resend-link">Resend</a> </span> </p>
     </div>
   </div>
 </body>
+
 </html>
